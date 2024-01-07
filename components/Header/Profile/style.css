@@ -1,0 +1,20 @@
+.profileIcon{
+    background: url(../../../public/profile.png);
+
+    width: 67px;
+height: 56px;
+    
+}
+.profileContainer{
+    display: flex;
+}
+.profileText{
+    color: #FFC7C7;
+
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-right: 9px;
+}

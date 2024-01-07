@@ -1,4 +1,6 @@
+
 .globalBody{
+  background:url(../public/background.svg) ;
 height: 100vh;
   display: grid;
   grid-template-columns: 20% 71% 9%;
@@ -11,14 +13,23 @@ height: 100vh;
   margin: auto;
 }
 .globalHead{
+  width: 100%;
+  height: 100%;
 grid-area: a;
 }
 .globalMenu{
+  width: 100%;
+  height: 100%;
   grid-area: b;
 }
 .globalChildren{
+  width: 100%;
+  height: 100%;
   grid-area: f;
 }
 .globalPlayer{
+  width: 100%;
+  height: 100%;
   grid-area: c;
 }
+

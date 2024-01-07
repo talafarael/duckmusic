@@ -1,11 +1,12 @@
-import { Header } from '@/components/header'
+
 import { Menu } from '@/components/menu/menu'
 import { Player } from '@/components/player'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { Header } from '@/components/HeroHeader'
+import back from '../public/background.svg'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,11 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='globalBody'>     
-        <div className='globalHead'> 
+      <body className='globalBody' style={{ backgroundImage: `url(${back})` }}>     
+        <div className='globalHead' > 
         <Header />
         </div>
-      <  div className='globalMenu'>  <Menu /></div>
+      <  div className='globalMenu' >  <Menu /></div>
       
       <div className='globalChildren'>{children}</div>
       <div className='globalPlayer'>

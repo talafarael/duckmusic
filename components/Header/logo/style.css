@@ -1,0 +1,17 @@
+.logo{
+    width: 89px;
+height: 78px;
+border-radius: 250px;
+background: #45063B;
+}
+.logoText{
+    color: #FFC7C7;
+font-family: Inter;
+font-size: 45px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.logoContainer{
+    display:flex ;
+}
