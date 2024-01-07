@@ -1,3 +1,6 @@
+import { Header } from '@/components/header'
+import { Menu } from '@/components/menu/menu'
+import { Player } from '@/components/player'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -16,7 +19,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className='globalBody'>     
+        <div className='globalHead'> 
+        <Header />
+        </div>
+      <  div className='globalMenu'>  <Menu /></div>
+      
+      <div className='globalChildren'>{children}</div>
+      <div className='globalPlayer'>
+        <Player />
+      </div>
+      
+      </body> 
     </html>
   )
 }
