@@ -1,30 +1,22 @@
-'use client'
+
 import { Authors } from "@/components/authorsmain/Author"
-import { getMainPosts } from "@/services/getPosts"
+
 import Link from "next/link"
-import { useEffect, useState } from "react"
-interface Post{
-  _id:string,
-  img:string,
-  autor:string
+
+
+const getMainPosts= async()=>{
+  const response =await fetch('https://project-49di.onrender.com/auth/getsongsforcreatmainpage')
+  return  response.json()
 }
+export default async function Main() {
 
-export default function Main() {
-const [main,setMain]=useState<Post[]>([])
-const [load ,setLoad]=useState<boolean>(false)
-useEffect(()=>{
-  getMainPosts().then(
-  data=>{console.log(data.arr.autor)
-    setLoad(true)
-    setMain(data.arr.autor)
-    
-  }
-  )
-},[])
+ const author= await getMainPosts()
 
+  
   return (
+   
     <div>
-      {load?(  <Authors Post={main}></Authors>):(['load...'])}
+    <Authors Post={author.arr.autor}></Authors>
      
 
      

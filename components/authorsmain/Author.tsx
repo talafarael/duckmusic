@@ -12,7 +12,7 @@ const Authors = ({ Post }: { Post: Props[] }) => {
         <div>
             {Post.map((elem:any) => {
                 return (
-                    <Link href={`/page/${elem._id}`} key={elem._id}>
+                    <Link href={`/page/${elem.autor}`} key={elem._id}>
                         <img src={elem.img} alt="" />
                         <h1>{elem.autor}</h1>
                     </Link>
