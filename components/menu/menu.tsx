@@ -1,11 +1,15 @@
 import { MenuList } from "../menulist";
+import './style.css'
 const navItem=[
-    { link:'/',page:'Home'},
-    { link:'/search',page:'Search'}
+    { link:'/',page:'Головна'},
+    { link:'',page:''},
+    { link:'/search',page:'Пошук'},
+    { link:'/profile',page:'Профіль'} ,
+    { link:'/playlist',page:'Плейліст'}
     ]
 const Menu = () => {
     return (
-     <div>
+     <div className="containerMenu">
        < MenuList navLinks={navItem} />
      </div>
     );

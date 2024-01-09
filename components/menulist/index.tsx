@@ -10,22 +10,27 @@ const MenuList = ({ navLinks }: Props) => {
     const pathname = usePathname();
     return (
         <>
-            {navLinks.map((elem) => {
-                const isActive = pathname === elem.link;
-
-                return (
-                    <div>
+        {navLinks.map((elem) => {
+            const isActive = pathname === elem.link;
+    
+            return (
+                elem.link=='' ? (
+                    <div className='lineMenu' key={elem.label}></div>
+                ) : (
+                    
                         <Link
                             className={isActive ? 'activeMenu' : 'MenuLink'}
                             href={elem.link}
-                            key={elem.label}
-                        >
+                        ><div key={elem.label} className='liMenu'>
                             {elem.page}
+                            </div>
                         </Link>
-                    </div>
-                );
-            })}
-        </>
+                    
+                )
+            );
+        })}
+    </>
+    
     );
 };
 

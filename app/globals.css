@@ -3,8 +3,8 @@
   background:url(../public/background.svg) ;
 height: 100vh;
   display: grid;
-  grid-template-columns: 20% 71% 9%;
-    grid-template-rows: 14% 86%;
+  grid-template-columns:22% 69% 9%;
+    grid-template-rows: 14% 84%;
     grid-template-areas:
     'a a c'
     'b f c';
