@@ -1,0 +1,17 @@
+.playerContainer{
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.31) 130.68%,
+        rgba(217, 217, 217, 0) 130.69%
+    );
+    height: 100%;
+}
+.buutonPlayContainer{
+    width: 45px;
+    height: 49px;
+background: none;
+}
+.imgPlay{
+    width: 45px;
+    height: 49px;
+}
