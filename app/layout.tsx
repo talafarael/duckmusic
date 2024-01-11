@@ -13,6 +13,7 @@ type GlobalContent = {
     songs: string;
     state: boolean;
     audio: string;
+    allAudio:string;
 };
 // export const metadata: Metadata = {
 //   title: 'Create Next App',
@@ -23,6 +24,7 @@ const initialState: GlobalContent = {
     songs: ' https://project-49di.onrender.com/images\\1701954196234.mp3',
     state: true,
     audio: '',
+    allAudio:''
 };
 export default function RootLayout({
     children,

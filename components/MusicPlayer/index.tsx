@@ -1,5 +1,6 @@
-import ButtonPlay from "../buttonPlay";
-
+import { useEffect } from 'react';
+import ButtonPlay from '../buttonPlay';
+import styles from './style.module.scss';
 
 type MusicItem = {
     _id: string;
@@ -15,19 +16,23 @@ type Props = {
 
 const MusicPlayer = ({ Music }: Props) => {
     return (
-        <div>
+        <>
             {Music.map((musicItem) => (
-                <div key={musicItem._id}>
-                    <h2>{musicItem.autor}</h2>
-<ButtonPlay musicItem={musicItem.idpath} />
-                    <p>Songs: {musicItem.songs}</p>
+                <div key={musicItem._id} className={styles.container}>
+                    <ButtonPlay Music={Music} musicItem={musicItem.idpath } />
                     <img
+                        className={styles.imgIcon}
                         src={musicItem.img_autor}
                         alt={`Image of ${musicItem.autor}`}
                     />
+                    <div className={styles.textContainer}>
+                        <h1 className={styles.title}>{musicItem.songs}</h1>
+
+                        <p className={styles.author}>{musicItem.autor} </p>
+                    </div>
                 </div>
             ))}
-        </div>
+        </>
     );
 };
 export { MusicPlayer };

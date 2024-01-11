@@ -33,3 +33,7 @@ grid-area: a;
   grid-area: c;
 }
 
+a{font-size: 25px;
+   color: #FFC7C7;
+     text-decoration: none;
+ }
