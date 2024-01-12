@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from './style.module.scss';
 import stylesAnimation from '../Animation.module.scss';
 import imgSrc from '../../public/pause.png';
+
 type MusicItem = {
     _id: string;
     autor: string;
@@ -13,7 +14,7 @@ type MusicItem = {
     img_autor: string;
 };
 type Props = {
-    musicItem:string
+    musicItem:MusicItem
     Music: MusicItem[];
 };
 export default function ButtonPlay({ musicItem ,Music}: Props) {
@@ -34,7 +35,7 @@ console.log(musicItem)
                 });
             }}
         >
-            {musicItem === value.songs && !value.state ? (
+            {musicItem.idpath === value.songs.idpath && !value.state ? (
                 <div className={ stylesAnimation.soundwaveContainer}>
                   
                     <div className={ stylesAnimation.bar}></div>

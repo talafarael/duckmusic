@@ -19,7 +19,7 @@ const MusicPlayer = ({ Music }: Props) => {
         <>
             {Music.map((musicItem) => (
                 <div key={musicItem._id} className={styles.container}>
-                    <ButtonPlay Music={Music} musicItem={musicItem.idpath } />
+                    <ButtonPlay Music={Music} musicItem={musicItem } />
                     <img
                         className={styles.imgIcon}
                         src={musicItem.img_autor}
@@ -35,4 +35,4 @@ const MusicPlayer = ({ Music }: Props) => {
         </>
     );
 };
-export { MusicPlayer };
+export  {MusicPlayer}

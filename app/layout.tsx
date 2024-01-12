@@ -21,10 +21,10 @@ type GlobalContent = {
 // }
 
 const initialState: GlobalContent = {
-    songs: ' https://project-49di.onrender.com/images\\1701954196234.mp3',
+    songs: '',
     state: true,
     audio: '',
-    allAudio:''
+    allAudio:'',
 };
 export default function RootLayout({
     children,
