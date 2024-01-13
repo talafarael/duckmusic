@@ -18,6 +18,9 @@ async function getData(id: string): Promise<Song[]> {
       headers: {
         'Content-Type': 'application/json',
       },
+      next: {
+        revalidate: 120,
+      },
       body: JSON.stringify({
         autor: id,
       }),
