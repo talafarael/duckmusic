@@ -1,3 +1,4 @@
+import AuthorMain from "@/components/AuthorMain";
 import { MusicPlayer } from "@/components/MusicPlayer";
 
 type Props = {
@@ -34,9 +35,32 @@ async function getData(id: string): Promise<Song[]> {
     return [];
   }
 }
+async function postAuthorInfoPosts(id: string) {
+  try{
+  const response = await fetch('https://project-49di.onrender.com/auth/getauthorinfo', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      author: id,
+    }),
+  });
+
+  const data = response.json();
+  return data;
+} catch (error) {
+  console.error('Error fetching songs:', error);
+  return [];
+}
+}
 
 export default async function Post({ params: { id } }:Props) {
+  const authorInfo=await postAuthorInfoPosts(id)
+  console.log(authorInfo+'fffff')
  const Songs=await getData(id)
- console.log(Songs)
-    return <><MusicPlayer Music={Songs}/></>;
+ console.log(Songs+'page')
+    return <>
+    <AuthorMain />
+    <MusicPlayer Music={Songs}/></>;
 }
